@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-08-25T19:36:11 IST" name="Suite" finished-at="2026-08-25T19:36:21 IST" duration-ms="10375">
+    <groups>
+    </groups>
+    <test started-at="2026-08-25T19:36:11 IST" name="Test" finished-at="2026-08-25T19:36:21 IST" duration-ms="10375">
+      <class name="api.BearerTokenTest">
+        <test-method signature="bearerTokenTest()[pri:0, instance:api.BearerTokenTest@97e93f1]" started-at="2026-08-25T19:36:18 IST" name="bearerTokenTest" finished-at="2026-08-25T19:36:19 IST" duration-ms="709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bearerTokenTest -->
+      </class> <!-- api.BearerTokenTest -->
+      <class name="api.DeleteUserApiTest">
+        <test-method signature="deleteUserTest()[pri:0, instance:api.DeleteUserApiTest@491b9b8]" started-at="2026-08-25T19:36:15 IST" name="deleteUserTest" finished-at="2026-08-25T19:36:16 IST" duration-ms="556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserTest -->
+      </class> <!-- api.DeleteUserApiTest -->
+      <class name="api.HeaderTest">
+        <test-method signature="headerTest()[pri:0, instance:api.HeaderTest@aba625]" started-at="2026-08-25T19:36:17 IST" name="headerTest" finished-at="2026-08-25T19:36:18 IST" duration-ms="711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- headerTest -->
+      </class> <!-- api.HeaderTest -->
+      <class name="api.NegativeApiTest">
+        <test-method signature="invalidUserTest()[pri:0, instance:api.NegativeApiTest@5a5a729f]" started-at="2026-08-25T19:36:19 IST" name="invalidUserTest" finished-at="2026-08-25T19:36:20 IST" duration-ms="996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidUserTest -->
+      </class> <!-- api.NegativeApiTest -->
+      <class name="api.UpdateUserApiTest">
+        <test-method signature="updateUserTest()[pri:0, instance:api.UpdateUserApiTest@4b520ea8]" started-at="2026-08-25T19:36:20 IST" name="updateUserTest" finished-at="2026-08-25T19:36:20 IST" duration-ms="643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserTest -->
+      </class> <!-- api.UpdateUserApiTest -->
+      <class name="api.GetuserByIdTest">
+        <test-method signature="getUserByIdTest()[pri:0, instance:api.GetuserByIdTest@1a4927d6]" started-at="2026-08-25T19:36:16 IST" name="getUserByIdTest" finished-at="2026-08-25T19:36:17 IST" duration-ms="949" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserByIdTest -->
+      </class> <!-- api.GetuserByIdTest -->
+      <class name="api.CreateUserApiTest">
+        <test-method signature="createUserTest()[pri:0, instance:api.CreateUserApiTest@7a6d7e92]" started-at="2026-08-25T19:36:17 IST" name="createUserTest" finished-at="2026-08-25T19:36:17 IST" duration-ms="617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUserTest -->
+      </class> <!-- api.CreateUserApiTest -->
+      <class name="api.RequestBodyTest">
+        <test-method signature="requestBodyTest()[pri:0, instance:api.RequestBodyTest@79207381]" started-at="2026-08-25T19:36:14 IST" name="requestBodyTest" finished-at="2026-08-25T19:36:15 IST" duration-ms="1319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- requestBodyTest -->
+      </class> <!-- api.RequestBodyTest -->
+      <class name="api.BasicAuthTest">
+        <test-method signature="basicAuthTest()[pri:0, instance:api.BasicAuthTest@25df00a0]" started-at="2026-08-25T19:36:11 IST" name="basicAuthTest" finished-at="2026-08-25T19:36:14 IST" duration-ms="2997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basicAuthTest -->
+      </class> <!-- api.BasicAuthTest -->
+      <class name="api.UserapiTest">
+        <test-method signature="getUserTest()[pri:0, instance:api.UserapiTest@6b09fb41]" started-at="2026-08-25T19:36:21 IST" name="getUserTest" finished-at="2026-08-25T19:36:21 IST" duration-ms="384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserTest -->
+      </class> <!-- api.UserapiTest -->
+      <class name="api.GetUsersQueryTest">
+        <test-method signature="getUsersWithQueryParamTest()[pri:0, instance:api.GetUsersQueryTest@16150369]" started-at="2026-08-25T19:36:20 IST" name="getUsersWithQueryParamTest" finished-at="2026-08-25T19:36:21 IST" duration-ms="419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUsersWithQueryParamTest -->
+      </class> <!-- api.GetUsersQueryTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
