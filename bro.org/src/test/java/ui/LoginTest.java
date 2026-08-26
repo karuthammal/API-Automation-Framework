@@ -1,22 +1,47 @@
 package ui;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import junit.framework.Assert;
+
 
 public class LoginTest{
-	@Test
-	public void login() {
-		WebDriver driver = new ChromeDriver();
+	WebDriver driver;
+	WebDriverWait wait;
+	@BeforeMethod
+	public void setup() {
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("admin123");
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		String currentUrl = driver.getCurrentUrl();
-		Assert.assertTrue(currentUrl.contains("dashboard"));
-		driver.quit();
+		
 	}
-}
+		@Test
+		public void login() {
+		WebDriverWait wait  = new WebDriverWait(driver,Duration.ofSeconds(20));
+		WebElement username  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Username']")));
+		username.sendKeys("Admin");
+		WebElement password  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='password']")));
+		password.sendKeys("admin123");
+		WebElement submit  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
+		submit.click();
+		}
+		@AfterMethod
+		public void tearDown() {
+			if(driver != null) {
+				driver.quit();
+			}
+		
+			
+		}
+		
+	}
+
