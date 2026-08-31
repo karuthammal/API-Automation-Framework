@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-31T15:09:06 IST" name="Default suite" finished-at="2026-08-31T15:09:19 IST" duration-ms="12487">
+  <suite started-at="2026-08-31T16:46:02 IST" name="Default suite" finished-at="2026-08-31T16:46:08 IST" duration-ms="6250">
     <groups>
     </groups>
-    <test started-at="2026-08-31T15:09:06 IST" name="Default test" finished-at="2026-08-31T15:09:19 IST" duration-ms="12487">
+    <test started-at="2026-08-31T16:46:02 IST" name="Default test" finished-at="2026-08-31T16:46:08 IST" duration-ms="6250">
       <class name="ui.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:ui.LoginTest@128d2484]" started-at="2026-08-31T15:09:06 IST" name="setup" finished-at="2026-08-31T15:09:16 IST" duration-ms="10005" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:ui.LoginTest@128d2484]" started-at="2026-08-31T16:46:02 IST" name="setup" finished-at="2026-08-31T16:46:07 IST" duration-ms="5298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:ui.LoginTest@128d2484]" started-at="2026-08-31T15:09:16 IST" name="login" finished-at="2026-08-31T15:09:18 IST" duration-ms="2263" status="PASS">
+        <test-method signature="login()[pri:0, instance:ui.LoginTest@128d2484]" started-at="2026-08-31T16:46:07 IST" name="login" finished-at="2026-08-31T16:46:08 IST" duration-ms="722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.LoginTest@128d2484]" started-at="2026-08-31T15:09:18 IST" name="tearDown" finished-at="2026-08-31T15:09:19 IST" duration-ms="173" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.LoginTest@128d2484]" started-at="2026-08-31T16:46:08 IST" name="tearDown" finished-at="2026-08-31T16:46:08 IST" duration-ms="170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
