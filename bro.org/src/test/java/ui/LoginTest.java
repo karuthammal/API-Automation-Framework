@@ -13,47 +13,70 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+public class LoginTest {
 
+    WebDriver driver;
+    WebDriverWait wait;
 
-public class LoginTest{
-	WebDriver driver;
-	WebDriverWait wait;
-	@BeforeMethod
-	public void setup() {
+    @BeforeMethod
+    public void setup() {
 
-	    ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
 
-	    options.addArguments("--headless=new");
-	    options.addArguments("--no-sandbox");
-	    options.addArguments("--disable-dev-shm-usage");
-	    options.addArguments("--disable-gpu");
-	    options.addArguments("--disable-software-rasterizer");
-	    options.addArguments("--disable-extensions");
-	    options.addArguments("--window-size=1920,1080");
-	    options.addArguments("--remote-debugging-port=9222");
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--disable-software-rasterizer");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--window-size=1920,1080");
 
-	    driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
 
-	    driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-	}
-		@Test
-		public void login() {
-		WebDriverWait wait  = new WebDriverWait(driver,Duration.ofSeconds(20));
-		WebElement username  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Username']")));
-		username.sendKeys("Admin");
-		WebElement password  = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='password']")));
-		password.sendKeys("admin123");
-		WebElement submit  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
-		submit.click();
-		}
-		@AfterMethod
-		public void tearDown() {
-			if(driver != null) {
-				driver.quit();
-			}
-		
-			
-		}
-		
-	}
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
+        wait.until(ExpectedConditions.urlContains("/auth/login"));
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.xpath("//input[@placeholder='Username']")
+        ));
+    }
+
+    @Test
+    public void login() {
+
+        WebElement username = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.xpath("//input[@placeholder='Username']")
+                )
+        );
+
+        username.sendKeys("Admin");
+
+        WebElement password = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.xpath("//input[@name='password']")
+                )
+        );
+
+        password.sendKeys("admin123");
+
+        WebElement submit = wait.until(
+                ExpectedConditions.elementToBeClickable(
+                        By.xpath("//button[@type='submit']")
+                )
+        );
+
+        submit.click();
+    }
+
+    @AfterMethod
+    public void tearDown() {
+
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+}
