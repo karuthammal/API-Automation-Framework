@@ -20,16 +20,18 @@ public class LoginTest{
 	WebDriverWait wait;
 	@BeforeMethod
 	public void setup() {
-	ChromeOptions options = new ChromeOptions();
-	options.addArguments("--headless");
 
-	options.addArguments("--no-sandbox");
-	options.addArguments("--disable-dev-shm-usage");
+	    ChromeOptions options = new ChromeOptions();
 
-	driver = new ChromeDriver(options);
-		driver.manage().window().maximize();
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		
+	    options.addArguments("--headless=new");
+	    options.addArguments("--no-sandbox");
+	    options.addArguments("--disable-dev-shm-usage");
+	    options.addArguments("--disable-gpu");
+	    options.addArguments("--window-size=1920,1080");
+
+	    driver = new ChromeDriver(options);
+
+	    driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 	}
 		@Test
 		public void login() {
