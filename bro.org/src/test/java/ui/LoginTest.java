@@ -16,7 +16,6 @@ import org.testng.annotations.Test;
 public class LoginTest {
 
     WebDriver driver;
-    WebDriverWait wait;
 
     @BeforeMethod
     public void setup() {
@@ -32,43 +31,21 @@ public class LoginTest {
         options.addArguments("--window-size=1920,1080");
 
         driver = new ChromeDriver(options);
-
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-        wait.until(ExpectedConditions.urlContains("/auth/login"));
-
-        wait.until(ExpectedConditions.presenceOfElementLocated(
-                By.xpath("//input[@placeholder='Username']")
-        ));
     }
 
     @Test
     public void login() {
 
-        WebElement username = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//input[@placeholder='Username']")
-                )
-        );
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 
+        WebElement username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='username']")));
         username.sendKeys("Admin");
 
-        WebElement password = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("//input[@name='password']")
-                )
-        );
-
+        WebElement password = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='password']")));
         password.sendKeys("admin123");
 
-        WebElement submit = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//button[@type='submit']")
-                )
-        );
-
+        WebElement submit = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
         submit.click();
     }
 
